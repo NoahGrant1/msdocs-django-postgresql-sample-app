@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'GenerationProject'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_52D86FA621AB40F19F66E5CE5E26D5CC }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7667648CC21C484994EF04FE29914B0F }}
