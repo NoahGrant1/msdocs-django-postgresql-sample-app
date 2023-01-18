@@ -44,8 +44,11 @@
 {% block content %}
   <h1> Welcome to IOT/machine learning </h1>
 
-    <p> This is a web portal for our machine learning needs <p>
-    {% load static %} <img src="{% static "restaurant_review/images/ml.jpg" %}" alt="AI" />
+    <p> This is a web portal for our machine learning needs </p>
+    <p>
+        {% load static %} <img src="{% static 'images/ml.jpg' %}" alt="AI" />
+    </p>
+
 
   {% if restaurants %}
       <table class="table">
