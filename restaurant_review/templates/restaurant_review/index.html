@@ -42,38 +42,29 @@
   </style>
 {% endblock %}
 {% block content %}
-  <h1> Welcome to IOT/machine learning </h1>
+  <h1> Welcome to machine learning Program </h1>
 
     <p> This is a web portal for our machine learning needs </p>
     <p>
-        {% load static %} <img src="{% static 'images/ml.jpg' %}" alt="AI" />
+        {% load static %} <img src="{% static 'images/ml.jpg' %}" alt="AI" width="200" height="200" />
     </p>
 
+    <!-- Get user input for API -->
+    <!-- <form method="POST" action="{% url 'add_restaurant' %}">
+        <div class="mb-3">
+          <label for="restaurant_name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="restaurant_name" name="restaurant_name">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="cancel" class="btn btn-primary">Cancel</button>
+      </form>
+      -->
 
-  {% if restaurants %}
-      <table class="table">
-          <thead>
-              <tr>
-                  <th>Name</th>
-                  <th>Rating</th>
-                  <th class="text-end">Details</th>
-              </tr>
-          </thead>
-          <tbody>
-              {% for restaurant in restaurants %}
-                  <tr>
-                      <td>{{ restaurant.name }}</td>
-                      <td>{% star_rating restaurant.avg_rating restaurant.review_count   %}   </td>
-                      <td class="text-end"><a href="{% url 'details' restaurant.id %}" class="btn btn-sm btn-primary">Details</a></td>
-                  </tr>
-              {% endfor %}
-          </tbody>
-      </table>
-  {% else %}
-      <p>No restaurants exist.  Select Add new restaurant to add one.</p>
+
+    <!-- call API and send data -->
+
+    <!-- display the output -->
+
+
   {% endif %}
-
-  <div class="d-flex justify-content-end">
-          <a href="{% url 'create_restaurant' %}" class="btn btn-success px-4 gap-3">Add new restaurant</a>
-  </div>
 {% endblock %}
