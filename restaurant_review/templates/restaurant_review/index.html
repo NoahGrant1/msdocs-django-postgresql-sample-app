@@ -49,8 +49,9 @@
         {% load static %} <img src="{% static 'images/ml.jpg' %}" alt="AI" width="200" height="200" />
     </p>
 
-    <!-- Get user input for API -->
-    <!-- <form method="POST" action="{% url 'add_restaurant' %}">
+    {#  gGet user input for API #}
+    {% comment %}
+    <form method="POST" action="{% url 'add_restaurant' %}">
         <div class="mb-3">
           <label for="restaurant_name" class="form-label">Name</label>
           <input type="text" class="form-control" id="restaurant_name" name="restaurant_name">
@@ -58,12 +59,13 @@
         <button type="submit" class="btn btn-primary">Submit</button>
         <button type="cancel" class="btn btn-primary">Cancel</button>
       </form>
-      -->
+    {% endcomment %}
 
 
-    <!-- call API and send data -->
 
-    <!-- display the output -->
+    {# Call the API #}
+
+    {#  display result #}
     <p> </p>
 
 
