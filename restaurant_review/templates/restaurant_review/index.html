@@ -42,14 +42,15 @@
   </style>
 {% endblock %}
 {% block content %}
-  <h1> Welcome to machine learning Program </h1>
+  <h1> Welcome our python Script Website </h1>
 
-    <p> This is a web portal for our machine learning needs </p>
+    <p> THis is the web portal for our website </p>
+    {% comment %}
     <p>
         {% load static %} <img src="{% static 'images/ml.jpg' %}" alt="AI" width="300" height="300" />
     </p>
+    { endcomment %}
 
-    {#  gGet user input for API #}
     {% comment %}
     <form method="POST" action="{% url 'add_restaurant' %}">
         <div class="mb-3">
@@ -59,13 +60,9 @@
         <button type="submit" class="btn btn-primary">Submit</button>
         <button type="cancel" class="btn btn-primary">Cancel</button>
       </form>
+    <p> {% Helloworld %} </p>
     {% endcomment %}
 
 
-
-    {# Call the API #}
-
-    {#  display result #}
-    <p> {% Helloworld %} </p>
 
 {% endblock %}

@@ -77,5 +77,5 @@ def add_review(request, id):
     return HttpResponseRedirect(reverse('details', args=(id,)))
 
 def Helloworld(request):
-    message = "Hello World"
-    return HttpResponse(message)
+    return HttpResponse("HelloWorld")
+
