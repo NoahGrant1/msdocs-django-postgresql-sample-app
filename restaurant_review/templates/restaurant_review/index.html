@@ -49,12 +49,13 @@
     <p>
         {% load static %} <img src="{% static 'images/ml.jpg' %}" alt="AI" width="300" height="300" />
     </p>
-    { endcomment %}
+
 
     <form action="/user_name/" method="post">
         {% csrf_token %}
         {{ form }}
         <input type="submit" value="Submit">
     </form>
+    { endcomment %}
 
 {% endblock %}
