@@ -84,8 +84,8 @@ def Helloworld(request, name):
 
     # check if form valid and
     if form.is_valid():
-        now = datetime.datetime.now()
-        html = "<html><body> Hello %s is is now %s.<body><html>" % name, now
+        #now = datetime.datetime.now()
+        #html = "<html><body> Hello %s is is now %s.<body><html>" % name, now
         return HttpResponseRedirect('/index/')
     else:
         form = Welcome_message
