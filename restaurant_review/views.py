@@ -79,7 +79,7 @@ def add_review(request, id):
     return HttpResponseRedirect(reverse('details', args=(id,)))
 
 def Helloworld(request, name):
-    if request.POST == 'Post':
+    if request.POST == 'POST':
         form = Welcome_message(request.POST)
 
     # check if form valid and

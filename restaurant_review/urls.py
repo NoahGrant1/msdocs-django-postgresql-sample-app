@@ -8,9 +8,6 @@ urlpatterns = [
     path('create', views.create_restaurant, name='create_restaurant'),
     path('add', views.add_restaurant, name='add_restaurant'),
     path('review/<int:id>', views.add_review, name='add_review'),
-
-    # Test Python Program
-    path('index/Helloworld', views.Helloworld, name='Helloworld')
 ]
 
 urlpatterns += staticfiles_urlpatterns()
