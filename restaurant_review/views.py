@@ -4,6 +4,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.db.models import Avg, Count
 from django.urls import reverse
 from django.utils import timezone
+import datetime
+from .forms import Welcome_message
 
 from restaurant_review.models import Restaurant, Review
 
@@ -76,6 +78,17 @@ def add_review(request, id):
                 
     return HttpResponseRedirect(reverse('details', args=(id,)))
 
-def Helloworld(request):
-    return HttpResponse("HelloWorld")
+def Helloworld(request, name):
+    if request.POST == 'Post':
+        form = Welcome_message(request.POST)
+
+    # check if form valid and
+    if form.is_valid():
+        now = datetime.datetime.now()
+        html = "<html><body> Hello %s is is now %s.<body><html>" % name, now
+        return HttpResponseRedirect('/index/')
+    else:
+        form = Welcome_message
+
+    return render(request, 'index.html', {'form' : form})
 

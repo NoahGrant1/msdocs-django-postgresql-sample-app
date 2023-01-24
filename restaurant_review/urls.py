@@ -1,5 +1,5 @@
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
@@ -10,7 +10,7 @@ urlpatterns = [
     path('review/<int:id>', views.add_review, name='add_review'),
 
     # Test Python Program
-    path("", views.Helloworld, name='Helloworld')
+    path('index/Helloworld', views.Helloworld, name='Helloworld')
 ]
 
 urlpatterns += staticfiles_urlpatterns()

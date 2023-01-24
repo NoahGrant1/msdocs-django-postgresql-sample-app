@@ -44,25 +44,17 @@
 {% block content %}
   <h1> Welcome our python Script Website </h1>
 
-    <p> THis is the web portal for our website </p>
+    <p> This is the web portal for our website </p>
     {% comment %}
     <p>
         {% load static %} <img src="{% static 'images/ml.jpg' %}" alt="AI" width="300" height="300" />
     </p>
     { endcomment %}
 
-    {% comment %}
-    <form method="POST" action="{% url 'add_restaurant' %}">
-        <div class="mb-3">
-          <label for="restaurant_name" class="form-label">Name</label>
-          <input type="text" class="form-control" id="restaurant_name" name="restaurant_name">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <button type="cancel" class="btn btn-primary">Cancel</button>
-      </form>
-    <p> {% Helloworld %} </p>
-    {% endcomment %}
-
-
+    <form action="/user_name/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>
 
 {% endblock %}
