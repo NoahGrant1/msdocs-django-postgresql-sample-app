@@ -78,17 +78,17 @@ def add_review(request, id):
                 
     return HttpResponseRedirect(reverse('details', args=(id,)))
 
-def Helloworld(request, name):
-    if request.POST == 'POST':
-        form = Welcome_message(request.POST)
+#def Helloworld(request, name):
+    #if request.POST == 'POST':
+        #form = Welcome_message(request.POST)
 
     # check if form valid and
-    if form.is_valid():
+    #if form.is_valid():
         #now = datetime.datetime.now()
         #html = "<html><body> Hello %s is is now %s.<body><html>" % name, now
-        return HttpResponseRedirect('/index/')
-    else:
-        form = Welcome_message
+        #return HttpResponseRedirect('/index/')
+    #else:
+        #form = Welcome_message
 
-    return render(request, 'index.html', {'form' : form})
+    #return render(request, 'index.html', {'form' : form})
 
